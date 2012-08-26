@@ -1,0 +1,42 @@
+
+/*/
+/*  castingstyle sheet 
+/*  for desktop devices    
+*/
+
+html, body
+{
+    background-color: #eee;
+}
+.gallery
+{
+    max-width: 800px;
+    height: 600px;
+    position: relative;
+}
+#image0, #image1, #image2, #image3, #image4, #image5, #image6, #image7, #image8
+{
+    height: 200px;
+    width: 33%;
+    overflow: hidden;
+    float: left;
+    position: relative;
+
+}
+img
+{
+    width: 300%;
+    top: -80%;
+    left: -80%;
+    position: absolute;
+}
+#image0
+{
+
+}
+.placeholder
+{    
+    height: 200px;
+    width: 33%;
+    float: left;
+}

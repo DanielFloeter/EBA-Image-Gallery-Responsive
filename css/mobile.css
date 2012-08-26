@@ -1,0 +1,41 @@
+
+/*/
+/*  castingstyle sheet 
+/*  for mobile devices    
+*/
+
+html, body
+{
+    background-color: #eee;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.gallery
+{
+}
+
+#image0, #image1, #image2, #image3, #image4, #image5, #image6, #image7, #image8
+{
+    height: 100px;
+    width: 33%;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+img
+{
+    width: 300%;
+    top: -80%;
+    left: -80%;
+    position: absolute;
+}
+.placeholder
+{    
+    height: 100px;
+    width: 33%;
+    float: left;
+}
+
