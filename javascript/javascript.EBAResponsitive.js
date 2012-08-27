@@ -69,6 +69,7 @@ $(document).on('ready', function () {
                         easing: 'easeOutCirc',
                         complete: function () {
                             jImage2.css({ 'z-index': '1', 'position': 'relative', 'top': '0', 'left': '0' })
+                            .removeAttr('style')
                             .prev().remove();
                         }
                     }).find('img').animate({
@@ -78,7 +79,7 @@ $(document).on('ready', function () {
                     }, {
                         duration: 1000,
                         easing: 'easeOutCirc',
-                        complete: function () { }
+                        complete: function () { $(this).removeAttr('style'); }
                     });
             }
         });
