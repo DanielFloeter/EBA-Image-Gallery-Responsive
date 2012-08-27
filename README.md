@@ -1,4 +1,4 @@
-EBA-Gallery Responsitive
+EBA-Image-Gallery Responsitive
 ===============
 
 All-in-one image gallery without second external thumbnail-box or thumbnail slider-bar
