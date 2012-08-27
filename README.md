@@ -1,5 +1,5 @@
 EBA-Image-Gallery Responsitive
-===============
+==============================
 
 All-in-one image gallery without second external thumbnail-box or thumbnail slider-bar
 
@@ -7,7 +7,8 @@ tags: responsitive-design all-in-one-gallery image-gallery background-animation 
 
 demo page:
 
-coming soon ...
+[http://kometschuh.de/gallery/EBA-Image-Gallery-Responsitive/index.htm] (http://kometschuh.de/gallery/EBA-Image-Gallery-Responsitive/index.htm)
+
 
 ## License
 
