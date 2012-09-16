@@ -1,13 +1,13 @@
-EBA-Image-Gallery Responsitive
-==============================
+EBA-Image-Gallery Responsive
+============================
 
 All-in-one image gallery without second external thumbnail-box or thumbnail slider-bar
 
-tags: responsitive-design all-in-one-gallery image-gallery background-animation jQuery javascript
+tags: responsive-design all-in-one-gallery image-gallery background-animation jQuery javascript
 
 demo page:
 
-[http://kometschuh.de/gallery/EBA-Image-Gallery-Responsitive/index.htm] (http://kometschuh.de/gallery/EBA-Image-Gallery-Responsitive/index.htm)
+[http://kometschuh.de/gallery/EBA-Image-Gallery-Responsive/index.htm] (http://kometschuh.de/gallery/EBA-Image-Gallery-Responsive/index.htm)
 
 
 ## License
