@@ -9,6 +9,9 @@ demo page:
 
 [http://kometschuh.de/gallery/EBA-Image-Gallery-Responsive/index.htm] (http://kometschuh.de/gallery/EBA-Image-Gallery-Responsive/index.htm)
 
+Changes/Version Info
+
+[https://github.com/DanielFloeter/EBA-Image-Gallery-Responsive/wiki/Changes-Versions] (https://github.com/DanielFloeter/EBA-Image-Gallery-Responsive/wiki/Changes-Versions)
 
 ## License
 
