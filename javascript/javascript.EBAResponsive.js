@@ -1,6 +1,6 @@
 
 /*
-    EBA 3x3 Responsitive
+    EBA 3x3 Responsive
     description: all-in-one image gallery
     location: javascript.EBA3x3.js
     license: GPL or MIT
@@ -13,7 +13,8 @@ $(document).on('ready', function () {
     //------------------------------------------------------ - - - - - - - - - ------- \../
     // image attributes
     var aImageAttr = {
-        backgroundPosition: ['-164px -274px', '-66px -323px', '-390px -330px', '-480px -296px', '-163px -150px', '-360px -257px', '-364px -228px', '-277px -272px', '-231px -369px'],
+        backgroundPosition: ['-164px -274px', '-66px -323px', '-390px -330px', '-480px -296px',
+            '-163px -150px', '-360px -257px', '-364px -228px', '-277px -272px', '-231px -369px'],
         top: ['0', '0', '0', '200px', '200px', '200px', '400px', '400px', '400px'],
         left: ['0', '267px', '533px', '0', '267px', '533px', '0', '267px', '533px'],
         toggle: [true, true, true, true, true, true, true, true, true]
@@ -22,8 +23,18 @@ $(document).on('ready', function () {
     //------------------------------------------------------ - - - - - - - - - ------- \../
     // global variables
     var global = {
-        nImagesCount: $(aImageAttr.toggle).toArray().length
+        nImagesCount: $(aImageAttr.toggle).toArray().length,
+        nHeight: 200
     };
+
+
+    $(window).resize(function () {
+        var nWidth = $(window).width();
+        if (nWidth < 815) {
+            global.nHeight = nWidth * 0.75 / 3;         //  <--- set global.nHeight
+            $('.gallery div').css('height', global.nHeight + 'px');                        
+        }
+    });
 
     //------------------------------------------------------ - - - - - - - - - ------- \../
     // for all (3x3) images
@@ -34,7 +45,7 @@ $(document).on('ready', function () {
                 aImageAttr.toggle[j] = false;
 
                 $(this).stop()
-                       .before('<div class="placeholder"></div>')
+                       .before('<div class="placeholder" style="height:' + global.nHeight + 'px"></div>')
                        .css({ 'z-index': '99', 'position': 'absolute', 'top': aImageAttr.top[j], 'left': aImageAttr.left[j] })
                        .animate({
                            width: '100%',
@@ -60,8 +71,8 @@ $(document).on('ready', function () {
                 jImage2.stop()
                     .css({ 'z-index': '49' })
                     .animate({
-                        height: '200px',
-                        width: '33%',    
+                        height: global.nHeight + 'px',
+                        width: '33%',
                         top: aImageAttr.top[j],
                         left: aImageAttr.left[j]
                     }, {
@@ -69,7 +80,7 @@ $(document).on('ready', function () {
                         easing: 'easeOutCirc',
                         complete: function () {
                             jImage2.css({ 'z-index': '1', 'position': 'relative', 'top': '0', 'left': '0' })
-                            .removeAttr('style')
+                            // .removeAttr('style')
                             .prev().remove();
                         }
                     }).find('img').animate({
