@@ -27,7 +27,8 @@ $(document).on('ready', function () {
         nHeight: 200
     };
 
-
+    //------------------------------------------------------ - - - - - - - - - ------- \../
+    // adapt gallery height to image ratio (image width effects the image heights)
     $(window).resize(function () {
         var nWidth = $(window).width();
         if (nWidth < 815) {
