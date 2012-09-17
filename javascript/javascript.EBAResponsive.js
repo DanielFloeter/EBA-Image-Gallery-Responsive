@@ -28,6 +28,17 @@ $(document).on('ready', function () {
     };
 
     //------------------------------------------------------ - - - - - - - - - ------- \../
+    // init gallery height
+    (function () {
+        var nWidth = $(window).width();
+        if (nWidth < 815) {
+            global.nHeight = nWidth * 0.75 / 3;         //  <--- set global.nHeight
+            $('.gallery div').css('height', global.nHeight + 'px');
+
+        }
+    })()
+
+    //------------------------------------------------------ - - - - - - - - - ------- \../
     // adapt gallery height to image ratio (image width effects the image heights)
     $(window).resize(function () {
         var nWidth = $(window).width();
