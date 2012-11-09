@@ -28,15 +28,19 @@ $(document).on('ready', function () {
     };
 
     //------------------------------------------------------ - - - - - - - - - ------- \../
-    // init gallery height
-    (function () {
-        var nWidth = $(window).width();
+    // init gallery height    
+    function init() {        
+        var nWidth = $(window).width();        
         if (nWidth < 815) {
-            global.nHeight = nWidth * 0.75 / 3;         //  <--- set global.nHeight
+            global.nHeight = nWidth * 0.75 / 3 ;         //  <--- set global.nHeight
             $('.gallery div').css('height', global.nHeight + 'px');
-
-        }
-    })()
+            // $('#widthID').html("init: "+global.nHeight);
+        }else{
+            $('.gallery div').css('height', '200px');
+            // $('#widthID').html("nWidth: "+nWidth);
+        }        
+    }
+    init();
 
     //------------------------------------------------------ - - - - - - - - - ------- \../
     // adapt gallery height to image ratio (image width effects the image heights)
@@ -44,7 +48,8 @@ $(document).on('ready', function () {
         var nWidth = $(window).width();
         if (nWidth < 815) {
             global.nHeight = nWidth * 0.75 / 3;         //  <--- set global.nHeight
-            $('.gallery div').css('height', global.nHeight + 'px');                        
+            $('.gallery div').css('height', global.nHeight + 'px');
+            // $('#widthID').html("resize: "+global.nHeight);
         }
     });
 
@@ -102,7 +107,7 @@ $(document).on('ready', function () {
                     }, {
                         duration: 1000,
                         easing: 'easeOutCirc',
-                        complete: function () { $(this).removeAttr('style'); }
+                        complete: function () { $(this).removeAttr('style');  }
                     });
             }
         });
